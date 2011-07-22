@@ -1,0 +1,43 @@
+===================
+ Nanode-RESTbitlash
+===================
+
+Overview
+========
+To provide a REST interface for the bitlash environment.
+http://wiki.hackspace.org.uk/wiki/Project:Nanode/Bitlash
+
+Features
+========
+*Webserver running on the nanode
+*Bitlash library to initialise and run bitlash.
+*Filter for URL that has http://<ip>/RESTbitlash/<command>
+*Grab everything after /RESTbitlash/
+*Use doCharacter(char c) to pipe each char to the bitlash console, one at a time
+
+Installation
+============
+1. Download and extract http://bitlash.net/wiki/_media/bitlash-2.0-rc3d.zip from http://bitlash.net/wiki/start
+2. Rename bitlash-2.0-rc3d to bitlash and place in your arduino environment's /libraries folder. More detailed information regarding the installation of bitlash can be found here: http://bitlash.net/wiki/install
+3. Please note that to install Bitlash 2.0 RC3d on a nanode you need to do the following:
+4. Edit libraries/bitlash/src/bitlash-instream.c by commenting out "#define SDFILE" at or near line 32: //#define SDFILE
+6. Now restart the Arduino IDE, open examples->bitlash->bitlashdemo and upload to your Arduino
+
+Requirements
+============
+bitlash
+http://bitlash.net/wiki/start
+
+References
+==========
+
+Further Work / Other Ideas
+==========================
+samthetechie's idea / take on the system:
+*Generating GET and POST from what is typed into a text box / terminal window.
+*A pretty Nanode OS boot sequence.
+*An interactive terminal written in javascript for the Nanode
+
+example: http://bellard.org/jslinux/index.html
+info: http://bellard.org/jslinux/tech.html
+
